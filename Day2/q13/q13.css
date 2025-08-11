@@ -1,0 +1,46 @@
+
+:root {
+    --main-color: orange;
+    --dark-color: black;
+    --light-color: white;
+    --main-font: Arial, sans-serif;
+  }
+  
+
+  body {
+    font-family: var(--main-font);
+    background: #f0f0f0;
+    margin: 0;
+  }
+  
+  header {
+    background: var(--dark-color);
+    color: var(--light-color);
+    padding: 10px;
+    text-align: center;
+  }
+
+  main, section {
+    padding: 10px; 
+  }
+
+  nav a {
+    color: var(--light-color);
+    text-decoration: none;
+    margin: 0 8px;
+  }
+  
+  nav a:hover {
+    color: var(--main-color);
+  }
+  
+  button {
+    background: var(--main-color);
+    color: var(--light-color);
+    border: none;
+    padding: 8px 15px;
+  }
+  footer{
+    padding: 10px;
+  }
+  

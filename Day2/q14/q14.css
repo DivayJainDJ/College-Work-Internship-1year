@@ -1,0 +1,48 @@
+
+html {
+    font-size: 2vw; 
+  }
+  
+ 
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 10px;
+  }
+  
+  
+  h1 {
+    font-size: 2rem; 
+  }
+  
+  h2 {
+    font-size: 1.5rem;
+  }
+  
+  p {
+    font-size: 1rem;
+  }
+  
+ 
+  button {
+    font-size: 1rem;
+    padding: 0.5em 1em; 
+    background: orange;
+    color: white;
+    border: none;
+    border-radius: 5px;
+  }
+  
+
+  @media (max-width: 600px) {
+    html {
+      font-size: 3vw; 
+    }
+  }
+  
+  @media (min-width: 1200px) {
+    html {
+      font-size: 18px; 
+    }
+  }
+  

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Registration Form</title>
+</head>
+<body>
+
+  <h2>Registration Form</h2>
+
+  <form>
+
+    <label for="name">Full Name:</label><br>
+    <input type="text" id="name" name="name" required><br><br>
+
+    <label for="email">Email:</label><br>
+    <input type="email" id="email" name="email" required><br><br>
+
+    <label for="dob">Date of Birth:</label><br>
+    <input type="date" id="dob" name="dob" required><br><br>
+
+    <label for="color">Favorite Color:</label><br>
+    <input type="color" id="color" name="color"><br><br>
+
+    <label for="experience">Experience (0–10 years):</label><br>
+    <input type="range" id="experience" name="experience" min="0" max="10"><br><br>
+
+    <label for="country">Select Country:</label><br>
+    <input list="countries" id="country" name="country">
+    <datalist id="countries">
+      <option value="India">
+      <option value="United States">
+      <option value="Canada">
+      <option value="Australia">
+      <option value="Germany">
+    </datalist><br><br>
+
+    <input type="submit" value="Register">
+
+  </form>
+
+</body>
+</html>

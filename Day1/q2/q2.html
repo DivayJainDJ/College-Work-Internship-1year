@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Simple Contact Form</title>
+</head>
+<body>
+
+  <h2>Contact Us</h2>
+
+  <form>
+
+    <label for="name">Name:</label><br>
+    <input type="text" name="name" id="name" required><br><br>
+
+    <label for="email">Email:</label><br>
+    <input type="email" name="email" id="email" required><br><br>
+
+    <label for="phone">Phone:</label><br>
+    <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" required><br><br>
+ 
+    <label for="date">Date:</label><br>
+    <input type="date" id="date" min="2025-08-01" max="2025-12-31" required><br><br>
+
+    <label for="message">Message:</label><br>
+    <textarea name="message" id="message"></textarea><br><br>
+
+    <input type="submit" value="Send">
+  </form>
+
+</body>
+</html>
