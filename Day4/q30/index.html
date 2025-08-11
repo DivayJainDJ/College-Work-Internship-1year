@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Phone Number Validation</title>
+</head>
+<body>
+  <h2>Phone Number Validator</h2>
+  <p>Enter phone number in format: <strong>987-654-3210</strong></p>
+  
+  <input type="text" id="phoneInput" placeholder="Enter phone number" />
+  <button onclick="checkPhoneNumber()">Check</button>
+  
+  <p id="result"></p>
+  
+  <script>
+    function isValidPhoneNumber(phone) {
+      const phoneRegex = /^\d{3}-\d{3}-\d{4}$/;
+      return phoneRegex.test(phone);
+    }
+
+    function checkPhoneNumber() {
+      const phone = document.getElementById('phoneInput').value;
+      const resultEl = document.getElementById('result');
+
+      if (isValidPhoneNumber(phone)) {
+        resultEl.textContent = "Valid phone number ✅";
+        resultEl.style.color = "green";
+      } else {
+        resultEl.textContent = "Invalid phone number ❌";
+        resultEl.style.color = "red";
+      }
+    }
+  </script>
+</body>
+</html>

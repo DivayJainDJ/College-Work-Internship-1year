@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Unique Numbers Set Size</title>
+</head>
+<body>
+  <h2>Count Unique Numbers Using Set</h2>
+
+  <p>Input Array:</p>
+  <pre id="inputArray"></pre>
+
+  <button onclick="showUniqueCount()">Show Unique Count</button>
+
+  <p id="result"></p>
+
+  <script>
+    const numbers = [1, 2, 2, 3, 4, 4, 5];
+    document.getElementById('inputArray').textContent = JSON.stringify(numbers);
+
+    function showUniqueCount() {
+      const uniqueNumbersSet = new Set(numbers);
+      const uniqueCount = uniqueNumbersSet.size;
+
+      document.getElementById('result').textContent =
+        `Unique numbers: ${[...uniqueNumbersSet].join(', ')}\nCount: ${uniqueCount}`;
+    }
+  </script>
+</body>
+</html>

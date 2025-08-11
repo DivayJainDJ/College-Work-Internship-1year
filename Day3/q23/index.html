@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Favourite Colours</title>
+</head>
+<body>
+  <h2>My Favourite Colours</h2>
+  <div id="output"></div>
+
+  <script>
+    let colours = ["Blue", "Green", "Red", "Black", "White"];
+    let result = "";
+
+    for (let i = 0; i < colours.length; i++) {
+      result += colours[i] + "<br>";
+    }
+
+    document.getElementById("output").innerHTML = result;
+  </script>
+</body>
+</html>

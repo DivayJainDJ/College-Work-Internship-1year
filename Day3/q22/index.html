@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Check Adult</title>
+</head>
+<body>
+  <h2>Check if You Are an Adult</h2>
+  
+  <input type="number" id="age" placeholder="Enter your age">
+  <button onclick="checkAge()">Check</button>
+
+  <p id="result"></p>
+
+  <script>
+    function isAdult(age) {
+      return age >= 18;
+    }
+
+    function checkAge() {
+      let age = parseInt(document.getElementById('age').value);
+      let message = isAdult(age) ? "You are an adult." : "You are not an adult.";
+      document.getElementById('result').textContent = message;
+    }
+  </script>
+</body>
+</html>

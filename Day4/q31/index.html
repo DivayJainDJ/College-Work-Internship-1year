@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Remove Duplicates from Array</title>
+</head>
+<body>
+  <h2>Remove Duplicate Items from an Array</h2>
+
+  <p>Original Array:</p>
+  <pre id="originalArray"></pre>
+
+  <button onclick="removeDuplicates()">Remove Duplicates</button>
+
+  <p>Array After Removing Duplicates:</p>
+  <pre id="uniqueArray"></pre>
+
+  <script>
+    const fruits = ["apple", "banana", "apple", "orange", "banana"];
+    document.getElementById('originalArray').textContent = JSON.stringify(fruits);
+
+    function removeDuplicates() {
+      const uniqueFruits = [...new Set(fruits)];
+      document.getElementById('uniqueArray').textContent = JSON.stringify(uniqueFruits);
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Greeting Function</title>
+</head>
+<body>
+  <h2>Greet User</h2>
+  
+  <input type="text" id="username" placeholder="Enter your name">
+  <button onclick="showGreeting()">Greet</button>
+
+  <p id="message"></p>
+
+  <script>
+    function greetUser(name) {
+      return `Hello, ${name}! Welcome to our website.`;   
+    }
+
+    function showGreeting() {
+      let name = document.getElementById('username').value;
+      document.getElementById('message').textContent = greetUser(name);
+    }
+  </script>
+</body>
+</html>

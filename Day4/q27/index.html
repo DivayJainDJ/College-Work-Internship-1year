@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Hover Content Change</title>
+  <style>
+    #hoverDiv {
+      width: 300px;
+      height: 100px;
+      border: 2px solid black;
+      line-height: 100px;
+      text-align: center;
+      font-size: 20px;
+      margin: 50px auto;
+      user-select: none;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="hoverDiv">Hover over me!</div>
+
+  <script>
+    const div = document.getElementById('hoverDiv');
+
+    div.addEventListener('mouseover', () => {
+      div.textContent = "You're hovering over me!";
+    });
+
+    div.addEventListener('mouseout', () => {
+      div.textContent = "Hover over me!";
+    });
+  </script>
+
+</body>
+</html>

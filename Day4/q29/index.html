@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Form Submission Display</title>
+  <style>
+    form {
+      max-width: 300px;
+      margin: 20px auto;
+      font-family: Arial, sans-serif;
+    }
+    input, button {
+      width: 100%;
+      margin: 8px 0;
+      padding: 8px;
+      font-size: 1em;
+    }
+    .error {
+      color: red;
+      font-size: 0.9em;
+    }
+    #submittedData {
+      max-width: 300px;
+      margin: 20px auto;
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+      padding: 10px;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+
+  <form id="myForm" novalidate>
+    <h2>User Info</h2>
+
+    <label>Name:</label><br>
+    <input type="text" id="name" placeholder="Enter your name"><br>
+    <div id="nameError" class="error"></div>
+
+    <label>Email:</label><br>
+    <input type="email" id="email" placeholder="Enter your email"><br>
+    <div id="emailError" class="error"></div>
+
+    <label>Age:</label><br>
+    <input type="number" id="age" placeholder="Enter your age"><br>
+    <div id="ageError" class="error"></div>
+
+    <button type="submit">Submit</button>
+  </form>
+
+  <div id="submittedData"></div>
+
+  <script>
+    const form = document.getElementById('myForm');
+    const nameInput = document.getElementById('name');
+    const emailInput = document.getElementById('email');
+    const ageInput = document.getElementById('age');
+
+    const nameError = document.getElementById('nameError');
+    const emailError = document.getElementById('emailError');
+    const ageError = document.getElementById('ageError');
+    const submittedData = document.getElementById('submittedData');
+
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      nameError.textContent = "";
+      emailError.textContent = "";
+      ageError.textContent = "";
+      submittedData.textContent = "";
+
+      let isValid = true;
+
+ 
+      if (nameInput.value.trim() === "") {
+        nameError.textContent = "Name cannot be empty.";
+        isValid = false;
+      }
+      if (!emailInput.value.includes('@')) {
+        emailError.textContent = "Email must include '@'.";
+        isValid = false;
+      }
+      const ageVal = parseInt(ageInput.value);
+      if (isNaN(ageVal) || ageVal < 18 || ageVal > 60) {
+        ageError.textContent = "Age must be a number between 18 and 60.";
+        isValid = false;
+      }
+
+      if (isValid) {
+       
+        submittedData.innerHTML = `
+          <h3>Submitted Data:</h3>
+          <p><strong>Name:</strong> ${nameInput.value}</p>
+          <p><strong>Email:</strong> ${emailInput.value}</p>
+          <p><strong>Age:</strong> ${ageInput.value}</p>
+        `;
+
+        form.reset();
+      }
+    });
+  </script>
+
+</body>
+</html>

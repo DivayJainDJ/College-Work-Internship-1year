@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Simple Counter</title>
+  <style>
+    #counter {
+      font-size: 2em;
+      margin: 20px;
+    }
+    button {
+      font-size: 1.5em;
+      width: 50px;
+      height: 50px;
+      margin: 5px;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Simple Counter</h2>
+
+  <button id="decrease">−</button>
+  <span id="counter">0</span>
+  <button id="increase">+</button>
+
+  <script>
+    let count = 0;
+    const counterDisplay = document.getElementById('counter');
+    const increaseBtn = document.getElementById('increase');
+    const decreaseBtn = document.getElementById('decrease');
+
+    increaseBtn.addEventListener('click', () => {
+      count++;
+      counterDisplay.textContent = count;
+    });
+
+    decreaseBtn.addEventListener('click', () => {
+      count--;
+      counterDisplay.textContent = count;
+    });
+  </script>
+
+</body>
+</html>

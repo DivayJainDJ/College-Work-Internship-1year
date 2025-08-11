@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Operators Example</title>
+</head>
+<body>
+  <h2>Operators Example</h2>
+
+  <label>First Number: </label>
+  <input type="number" id="num1"><br><br>
+
+  <label>Second Number: </label>
+  <input type="number" id="num2"><br><br>
+
+  <button onclick="calculate()">Calculate</button>
+
+  <h3>Results:</h3>
+  <p id="addition"></p>
+  <p id="subtraction"></p>
+  <p id="multiplication"></p>
+  <p id="division"></p>
+
+  <script>
+    function calculate() {
+      let a = parseFloat(document.getElementById('num1').value);
+      let b = parseFloat(document.getElementById('num2').value);
+
+      document.getElementById('addition').textContent = `Addition: ${a + b}`;
+      document.getElementById('subtraction').textContent = `Subtraction: ${a - b}`;
+      document.getElementById('multiplication').textContent = `Multiplication: ${a * b}`;
+      document.getElementById('division').textContent = b !== 0 ? `Division: ${a / b}` : "Division: Cannot divide by zero";
+    }
+  </script>
+</body>
+</html>
